@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cloudflare-apps/create-cloudflare-app.git"
+    "url": "git+https://github.com/Hassancxpm/Simple-lightweight-modal-message-app.git"
   },
   "author": "Cloudflare Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cloudflare-apps/create-cloudflare-app/issues"
+    "url": "https://github.com/Hassancxpm/Simple-lightweight-modal-message-app.git/issues"
   },
-  "homepage": "https://github.com/cloudflare-apps/create-cloudflare-app#readme",
+  "homepage": "https://github.com/Hassancxpm/Simple-lightweight-modal-message-app.git#readme",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
