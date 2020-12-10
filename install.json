@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json.schemastore.org/install",
+  "resources": {
+    "body": [
+      {
+        "type": "style",
+        "src": "./build/styles.css"
+      },
+      {
+        "type": "script",
+        "src": "./build/index.js"
+      }
+    ]
+  },
+  "dns": [
+    {
+      "type": "TXT",
+      "content": "Managed TXT Record",
+      "name": "Created by create-cloudflare-app",
+      "ttl": 120
+    }
+  ],
+  "preview": {
+    "handlers": [
+      {
+        "options": ["_default"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "title": {
+        "order": 0,
+        "title": "Title",
+        "type": "string",
+        "default": "Title",
+        "placeholder": "Put your title here."
+      },
+      "message": {
+        "order": 1,
+        "title": "Message",
+        "type": "string",
+        "format": "richtext",
+        "default": "Hello world!",
+        "placeholder": "Put your message here."
+      },
+      "showAdvanced": {
+        "order": 2,
+        "type": "boolean",
+        "title": "Show advanced options",
+        "default": false
+      },
+      "advanced": {
+        "showIf": {
+          "showAdvanced": true
+        },
+        "order": 3,
+        "type": "string",
+        "format": "radios",
+        "enum": ["true", "false"],
+        "enumNames": {
+          "true": "Show this popup only once per user",
+          "false": "Show this popup only every time users reload a page"
+        },
+        "title": "Show this popup only once per user?",
+        "default": "true"
+      },
+      "PopupButton": {
+        "showIf": {
+          "showAdvanced": true
+        },
+        "order": 4,
+        "title": "Add a confirmation button to the popup",
+        "type": "string",
+        "format": "radios",
+        "enum": ["true", "false"],
+        "enumNames": {
+          "true": "Display a confirmation button on the popup",
+          "false": "Remove the confirmation button"
+        },
+        "default": "false"
+      },
+      "ButtonTitle": {
+        "showIf": {
+          "PopupButton": "true"
+        },
+        "order": 5,
+        "title": "Button Title",
+        "type": "string",
+        "default": "OK",
+        "placeholder": "Put the button title here."
+      },
+      "ButtonBehaviorRedirect": {
+        "showIf": {
+          "PopupButton": "true"
+        },
+        "order": 6,
+        "title": "Redirect when click on the button",
+        "type": "string",
+        "format": "radios",
+        "enum": ["true", "false"],
+        "enumNames": {
+          "true": "Redirect when users click on the button",
+          "false": "Close the popup when users click on the button"
+        },
+        "default": "false"
+      },
+      "UrlRedirection": {
+        "showIf": {
+          "ButtonBehaviorRedirect": "true"
+        },
+        "order": 7,
+        "type": "string",
+        "title": "Specify an URL to drive traffic",
+        "placeholder": "https://example.com"
+      }
+    }
+  }
+}
