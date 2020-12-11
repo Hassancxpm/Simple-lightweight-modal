@@ -161,7 +161,7 @@
         "enum": ["false", "true"],
         "enumNames": {
           "false": "The same message in all pages",
-          "true": "Specify French traduction of popup texts"
+          "true": "Add a French traduction"
         },
         "default": "false"
       },
