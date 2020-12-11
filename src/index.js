@@ -74,6 +74,7 @@ function init() {
 
     closeButton.style.background = options.ModalMainColor
     confirmationButton.style.background = options.ModalMainColor
+    confirmationButton.addEventListener("click", hideModal)
 
     closeButton.addEventListener("click", hideModal)
 
@@ -84,8 +85,6 @@ function init() {
         redirectTrafficTo()
       })
     }
-
-    confirmationButton.addEventListener("click", hideModal)
 
     if (options.advanced === "true" && !poppy) showModal()
 
