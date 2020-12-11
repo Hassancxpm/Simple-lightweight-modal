@@ -1,7 +1,7 @@
 {
   "name": "@cloudflare-apps/simple-lightweight-modal-message-app",
   "version": "1.0.0",
-  "description": "Simple lightweight modal message app",
+  "description": "Simple lightweight modal app",
   "scripts": {
     "start": "npm-run-all dev:setup dev:webpack",
     "dev:webpack": "webpack --watch --colors",

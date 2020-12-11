@@ -1,8 +1,8 @@
-# Simple lightweight modal message app
+# Simple lightweight modal app
 
 ## Overview
 
-Simple lightweight modal message Cloudflare app with with French translation and more options.
+Simple lightweight modal Cloudflare app with with French translation and more options.
 
 ## Options
 
