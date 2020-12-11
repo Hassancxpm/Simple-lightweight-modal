@@ -20,7 +20,7 @@ Install the dependencies with `yarn install` then build the project with `yarn b
 
 Next, navigate to [App Creator](https://www.cloudflare.com/apps/developer/app-creator) and upload your project directory.
 
-The App Creator will update automatically on file changes (Chrome only). Once you're done testing, press Create App to submit your app for moderation. Refer to our [Terms of Use](https://www.cloudflare.com/apps/developer/docs/resources/terms-of-use) for more information.
+The App Creator will update automatically on file changes (Chrome only). Once you're done testing, press Create App to submit your app for moderation. Refer to [Terms of Use](https://www.cloudflare.com/apps/developer/docs/resources/terms-of-use) for more information.
 
 ## Usage
 
