@@ -30,15 +30,26 @@
   },
   "options": {
     "properties": {
-      "title": {
+      "location": {
         "order": 0,
+        "title": "Location",
+        "description": "Where should the app appear on your site?",
+        "type": "object",
+        "format": "element",
+        "default": {
+          "selector": "body",
+          "method": "prepend"
+        }
+      },
+      "title": {
+        "order": 1,
         "title": "Title",
         "type": "string",
         "default": "Title",
         "placeholder": "Put your title here."
       },
       "message": {
-        "order": 1,
+        "order": 2,
         "title": "Message",
         "type": "string",
         "format": "richtext",
@@ -46,7 +57,7 @@
         "placeholder": "Put your message here."
       },
       "showAdvanced": {
-        "order": 2,
+        "order": 3,
         "type": "boolean",
         "title": "Show advanced options",
         "default": false
@@ -55,7 +66,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 3,
+        "order": 4,
         "type": "string",
         "format": "radios",
         "enum": ["true", "false"],
@@ -70,7 +81,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 4,
+        "order": 5,
         "title": "Add a confirmation button to the popup",
         "type": "string",
         "format": "radios",
@@ -85,7 +96,7 @@
         "showIf": {
           "PopupButton": "true"
         },
-        "order": 5,
+        "order": 6,
         "title": "Button Title",
         "type": "string",
         "default": "OK",
@@ -95,7 +106,7 @@
         "showIf": {
           "PopupButton": "true"
         },
-        "order": 6,
+        "order": 7,
         "title": "Redirect when click on the button",
         "type": "string",
         "format": "radios",
@@ -110,10 +121,17 @@
         "showIf": {
           "ButtonBehaviorRedirect": "true"
         },
-        "order": 7,
+        "order": 8,
         "type": "string",
         "title": "Specify an URL to drive traffic",
         "placeholder": "https://example.com"
+      },
+      "ModalMainColor": {
+        "order": 9,
+        "default": "#d3d3d3",
+        "format": "color",
+        "title": "Main color",
+        "type": "string"
       }
     }
   }

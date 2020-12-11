@@ -9,12 +9,13 @@ cloudflare-app[app="lightPopup"] {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 10000;
+  z-index: 99999999;
 }
 
 /* Use native elements when you'd like to inherit some styles from the page. */
 cloudflare-app[app="lightPopup"] p {
   text-indent: 0;
+  color: black;
 }
 
 /* Use em units to scale elements for different inherited styles. */
@@ -22,6 +23,7 @@ cloudflare-app[app="lightPopup"] h2 {
   font-size: 1.8em;
   font-weight: bold;
   margin-bottom: 0.5em;
+  color: black;
 }
 
 cloudflare-app[app="lightPopup"] .modal {
@@ -69,7 +71,7 @@ cloudflare-app[app="lightPopup"] .show-modal {
 }
 
 cloudflare-app[app="lightPopup"] .button.button--aylen {
-  background: lightgray;
+  background-color: lightgray;
   color: inherit;
   overflow: hidden;
   -webkit-transition: color 0.3s;
@@ -93,12 +95,7 @@ cloudflare-app[app="lightPopup"] .button--aylen::after {
   -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
-cloudflare-app[app="lightPopup"] .button--aylen::before {
-  background: #ebebeb;
-}
-cloudflare-app[app="lightPopup"] .button--aylen::after {
-  background: #dedee0;
-}
+
 cloudflare-app[app="lightPopup"] .button--aylen:hover {
   color: #fff;
 }

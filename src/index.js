@@ -75,6 +75,9 @@ function init() {
       }
     }
 
+    closeButton.style.background = options.ModalMainColor
+    confirmationButton.style.background = options.ModalMainColor
+
     closeButton.addEventListener("click", hideModal)
 
     if (options.ButtonBehaviorRedirect === "true") {
