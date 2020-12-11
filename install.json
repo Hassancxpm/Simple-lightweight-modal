@@ -127,6 +127,9 @@
         "placeholder": "https://example.com"
       },
       "ModalMainColor": {
+        "showIf": {
+          "showAdvanced": true
+        },
         "order": 9,
         "default": "#d3d3d3",
         "format": "color",
