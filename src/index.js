@@ -10,21 +10,34 @@ function init() {
   // updateElement runs every time the options are updated.
   // Most of your code will end up inside this function.
   function updateElement() {
+    const poppy = localStorage.getItem("lightPopup")
+    const documentLang = document.querySelector("html").getAttribute("lang")
+
     element = INSTALL.createElement(options.location, element)
 
-    // Set the app attribute to your app's dash-delimited alias.
     element.setAttribute("app", "lightPopup")
     element.innerHTML = `<div class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <span class="big-title">${options.title}</span>
-            <p>${options.message}</p>
-            <button class="button button--aylen button--round-l button--text-thick">${options.ButtonTitle}</button>
+            <span class="big-title">${
+              options.AddEnglishTraduction === "true" && documentLang !== "fr"
+                ? options.EnglishTitle
+                : options.title
+            }</span>
+            <p>${
+              options.AddEnglishTraduction === "true" && documentLang !== "fr"
+                ? options.EnglishMessage
+                : options.message
+            }</p>
+            <button class="button button--aylen button--round-l button--text-thick">${
+              options.AddEnglishTraduction === "true" && documentLang !== "fr"
+                ? options.EnglishButtonTitle
+                : options.ButtonTitle
+            }</button>
         </div>
     </div>`
 
-    const poppy = localStorage.getItem("lightPopup")
-    const modal = document.querySelector(
+    const modal = document.querySelectorAll(
       'cloudflare-app[app="lightPopup"] .modal',
     )
     const closeButton = document.querySelector(
@@ -35,12 +48,12 @@ function init() {
     )
 
     function showModal() {
-      modal.classList.add("show-modal")
+      modal[0].classList.add("show-modal")
       localStorage.setItem("lightPopup", "true")
     }
 
     function hideModal() {
-      modal.classList.remove("show-modal")
+      modal[0].classList.remove("show-modal")
     }
 
     function showButton() {
@@ -65,11 +78,20 @@ function init() {
     }
 
     function redirectTrafficTo() {
-      if (options.UrlRedirection && validURL(options.UrlRedirection)) {
+      if (
+        options.UrlRedirection.length > 0 &&
+        validURL(options.UrlRedirection)
+      ) {
         window.location.href = options.UrlRedirection
       } else {
         hideModal()
       }
+    }
+
+    function handleRedirectOnClick(e) {
+      e.preventDefault()
+      e.stopImmediatePropagation()
+      redirectTrafficTo()
     }
 
     closeButton.style.background = options.ModalMainColor
@@ -79,16 +101,14 @@ function init() {
     closeButton.addEventListener("click", hideModal)
 
     if (options.ButtonBehaviorRedirect === "true") {
-      confirmationButton.addEventListener("click", e => {
-        e.preventDefault()
-        e.stopImmediatePropagation()
-        redirectTrafficTo()
-      })
+      confirmationButton.addEventListener("click", handleRedirectOnClick)
+    } else {
+      confirmationButton.removeEventListener("click", handleRedirectOnClick)
     }
 
-    if (options.advanced === "true" && !poppy) showModal()
+    if (options.ShowOnlyOnce === "true" && !poppy) showModal()
 
-    if (options.advanced === "false") showModal()
+    if (options.ShowOnlyOnce === "false") showModal()
 
     if (options.PopupButton === "true") {
       showButton()

@@ -62,7 +62,7 @@
         "title": "Show advanced options",
         "default": false
       },
-      "advanced": {
+      "ShowOnlyOnce": {
         "showIf": {
           "showAdvanced": true
         },
@@ -133,8 +133,55 @@
         "order": 9,
         "default": "#d3d3d3",
         "format": "color",
-        "title": "Main color",
+        "title": "Button colors",
         "type": "string"
+      },
+      "AddEnglishTraduction": {
+        "showIf": {
+          "showAdvanced": true
+        },
+        "order": 10,
+        "title": "Do you want to add an English traduction?",
+        "description": "If activated, this options detects the html tag 'lang' attribute and load the English traductions",
+        "type": "string",
+        "format": "radios",
+        "enum": ["true", "false"],
+        "enumNames": {
+          "true": "Specify English traduction of popup texts",
+          "false": "The same message in all pages"
+        },
+        "default": "false"
+      },
+      "EnglishTitle":{
+        "showIf": {
+          "AddEnglishTraduction": "true"
+        },
+        "order": 11,
+        "title": "English Title",
+        "type": "string",
+        "default": "Title",
+        "placeholder": "Put your English title here."
+      },
+      "EnglishMessage": {
+        "showIf": {
+          "AddEnglishTraduction": "true"
+        },
+        "order": 12,
+        "title": "English Message",
+        "type": "string",
+        "format": "richtext",
+        "default": "Hello world!",
+        "placeholder": "Put your english message here."
+      },
+      "EnglishButtonTitle": {
+        "showIf": {
+          "AddEnglishTraduction": "true"
+        },
+        "order": 13,
+        "title": "English Button Title",
+        "type": "string",
+        "default": "OK",
+        "placeholder": "Put the English button title here."
       }
     }
   }
