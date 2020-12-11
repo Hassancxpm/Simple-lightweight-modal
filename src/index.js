@@ -17,7 +17,7 @@ function init() {
     element.innerHTML = `<div class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h2>${options.title}</h2>
+            <span class="big-title">${options.title}</span>
             <p>${options.message}</p>
             <button class="button button--aylen button--round-l button--text-thick">${options.ButtonTitle}</button>
         </div>

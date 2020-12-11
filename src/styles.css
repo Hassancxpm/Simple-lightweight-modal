@@ -1,6 +1,6 @@
 /* Set the app attribute to your app's dash-delimited alias. */
 cloudflare-app[app="lightPopup"] {
-  display: block;
+  display: flex;
   position: fixed;
   margin: 0.5em 0.2em;
   outline: 1px dotted;
@@ -20,7 +20,7 @@ cloudflare-app[app="lightPopup"] p {
 }
 
 /* Use em units to scale elements for different inherited styles. */
-cloudflare-app[app="lightPopup"] h2 {
+cloudflare-app[app="lightPopup"] .big-title {
   font-size: 1.8em;
   font-weight: bold;
   margin-bottom: 0.5em;
@@ -64,6 +64,8 @@ cloudflare-app[app="lightPopup"] .close-button:hover {
   background-color: darkgray;
 }
 cloudflare-app[app="lightPopup"] .show-modal {
+  display: flex;
+  margin: auto;
   z-index: 99999;
   opacity: 1;
   visibility: visible;
@@ -115,7 +117,7 @@ cloudflare-app[app="lightPopup"] .button {
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   float: right;
-  font-size: .8em;
+  font-size: 0.8em;
   display: block;
   margin: 1em;
   padding: 1em 2em;
