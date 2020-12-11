@@ -69,6 +69,7 @@
         "order": 4,
         "type": "string",
         "format": "radios",
+        "description": "Default is once per user",
         "enum": ["true", "false"],
         "enumNames": {
           "true": "Show this popup only once per user",
@@ -134,6 +135,7 @@
         "default": "#d3d3d3",
         "format": "color",
         "title": "Button colors",
+        "description": "Default is #d3d3d3",
         "type": "string"
       },
       "radius": {
