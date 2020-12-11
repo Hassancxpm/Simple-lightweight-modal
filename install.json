@@ -69,11 +69,10 @@
         "order": 4,
         "type": "string",
         "format": "radios",
-        "description": "Default is once per user",
         "enum": ["true", "false"],
         "enumNames": {
           "true": "Show this popup only once per user",
-          "false": "Show this popup only every time users reload a page"
+          "false": "Show this popup only every time the page is loaded"
         },
         "title": "Show this popup only once per user?",
         "default": "true"
