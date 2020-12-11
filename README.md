@@ -1,17 +1,16 @@
-[build]: ./media/build.gif "Build create-cloudflare-app"
-[upload]: ./media/upload.gif "Upload create-cloudflare-app"
-
-# Simple lightweight modal message app.git
+# Simple lightweight modal message app
 
 ## Overview
 
-Simple lightweight modal message Cloudflare app with some options.
+Simple lightweight modal message Cloudflare app with with French translation and more options.
 
 ## Options
 
 * RichText message
 * Add confirmation button
+* Add button colorpicker
 * Add redirect button
+* Add French traductions
 
 ## Setup
 
