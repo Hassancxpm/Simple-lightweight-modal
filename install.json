@@ -136,11 +136,24 @@
         "title": "Button colors",
         "type": "string"
       },
+      "radius": {
+        "showIf": {
+          "showAdvanced": true
+        },
+        "title": "How rounded should the popup appear?",
+        "format": "slider",
+        "order": 10,
+        "type": "number",
+        "default": 0.00,
+        "step": 0.03,
+        "minimum": 0,
+        "maximum": 0.15
+      },
       "AddFrenchTraduction": {
         "showIf": {
           "showAdvanced": true
         },
-        "order": 10,
+        "order": 11,
         "title": "Do you want to add a French traduction?",
         "description": "If activated, this options detects the html tag 'lang' attribute and load the French traductions",
         "type": "string",
@@ -156,7 +169,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 11,
+        "order": 12,
         "title": "French Title",
         "type": "string",
         "default": "Titre",
@@ -166,7 +179,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 12,
+        "order": 13,
         "title": "French Message",
         "type": "string",
         "format": "richtext",
@@ -177,7 +190,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 13,
+        "order": 14,
         "title": "French Button Title",
         "type": "string",
         "default": "OK",

@@ -15,7 +15,24 @@ function init() {
 
     element = INSTALL.createElement(options.location, element)
 
+    function getMaxZIndex() {
+      let max = 0
+      const elements = document.getElementsByTagName("*")
+
+      Array.prototype.slice.call(elements).forEach(el => {
+        const zIndex = parseInt(
+          document.defaultView.getComputedStyle(el).zIndex,
+          10,
+        )
+
+        max = zIndex ? Math.max(max, zIndex) : max
+      })
+
+      return max
+    }
+
     element.setAttribute("app", "lightPopup")
+    element.style.zIndex = getMaxZIndex() + 1
     element.innerHTML = `<div class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
@@ -39,6 +56,9 @@ function init() {
 
     const modal = document.querySelectorAll(
       'cloudflare-app[app="lightPopup"] .modal',
+    )
+    const modalContent = document.querySelector(
+      'cloudflare-app[app="lightPopup"] .modal-content',
     )
     const closeButton = document.querySelector(
       'cloudflare-app[app="lightPopup"] .close-button',
@@ -95,7 +115,14 @@ function init() {
     }
 
     closeButton.style.background = options.ModalMainColor
+
     confirmationButton.style.background = options.ModalMainColor
+
+    modalContent.style.borderRadius = `${(
+      (element.clientHeight / 2) *
+      options.radius
+    ).toFixed(2)}px`
+
     confirmationButton.addEventListener("click", hideModal)
 
     closeButton.addEventListener("click", hideModal)
