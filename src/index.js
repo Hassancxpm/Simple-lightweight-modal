@@ -10,10 +10,7 @@ function init() {
   // updateElement runs every time the options are updated.
   // Most of your code will end up inside this function.
   function updateElement() {
-    element = INSTALL.createElement(
-      { method: "prepend", selector: "body" },
-      element,
-    )
+    element = INSTALL.createElement(options.location, element)
 
     // Set the app attribute to your app's dash-delimited alias.
     element.setAttribute("app", "lightPopup")
