@@ -10,6 +10,7 @@ Simple lightweight modal message Cloudflare app with with French translation and
 * Add confirmation button
 * Add button colorpicker
 * Add redirect button
+* Add border-radius option
 * Add French traductions
 
 ## Setup
