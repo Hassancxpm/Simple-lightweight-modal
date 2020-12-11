@@ -20,18 +20,18 @@ function init() {
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <span class="big-title">${
-              options.AddEnglishTraduction === "true" && documentLang !== "fr"
-                ? options.EnglishTitle
+              options.AddFrenchTraduction === "true" && documentLang === "fr"
+                ? options.FrenchTitle
                 : options.title
             }</span>
             <p>${
-              options.AddEnglishTraduction === "true" && documentLang !== "fr"
-                ? options.EnglishMessage
+              options.AddFrenchTraduction === "true" && documentLang === "fr"
+                ? options.FrenchMessage
                 : options.message
             }</p>
             <button class="button button--aylen button--round-l button--text-thick">${
-              options.AddEnglishTraduction === "true" && documentLang !== "fr"
-                ? options.EnglishButtonTitle
+              options.AddFrenchTraduction === "true" && documentLang === "fr"
+                ? options.FrenchButtonTitle
                 : options.ButtonTitle
             }</button>
         </div>
