@@ -64,4 +64,4 @@ The Cloudflare [developer documentation](https://www.cloudflare.com/apps/develop
 
 ### Contribute
 
-Feel free to Pull Request this repo or to fork it. You can also open issues.
+Feel free to Pull Request this repository or to fork it. You can also open issues.
