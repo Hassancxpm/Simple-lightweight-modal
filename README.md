@@ -2,15 +2,15 @@
 
 ## Overview
 
-Simple lightweight modal Cloudflare app with with French translation and more options.
+Simple lightweight modal Cloudflare app with French translation and more options.
 
 ## Options
 
 * RichText message
-* Add confirmation button
-* Add button colorpicker
-* Add redirect button
-* Add border-radius option
+* Add optionnal button
+* Add colors customization
+* Add redirection feature
+* Add style options
 * Add French traductions
 
 ## Setup
