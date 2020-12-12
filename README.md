@@ -61,3 +61,7 @@ Simple Webpack 4 config using Babel and CSS Loader. Please refrain from modifyin
 ### Troubleshooting
 
 The Cloudflare [developer documentation](https://www.cloudflare.com/apps/developer/docs/getting-started) for examples and API usage.
+
+### Contribute
+
+Feel free to Pull Request this repo or to fork it. You can also open issues.
