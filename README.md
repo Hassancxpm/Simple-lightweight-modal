@@ -1,4 +1,4 @@
-# Simple lightweight modal app
+# Simple lightweight modal
 
 ## Overview
 
