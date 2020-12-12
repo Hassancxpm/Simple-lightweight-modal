@@ -38,19 +38,19 @@ The project uses [yarn-run-all](https://www.npmjs.com/package/yarn-run-all) whic
 
 This is where all the [installer options](https://www.cloudflare.com/apps/developer/docs/install-json) are added for the app.
 
-Use the DNS field to configure [Cloudflare DNS Records](https://api.cloudflare.com/#dns-records-for-a-zone-properties). If you don't want to configure DNS, just delete this field.
+DNS field is not used in this app [Cloudflare DNS Records](https://api.cloudflare.com/#dns-records-for-a-zone-properties). If you want to configure DNS, just add this field.
 
 #### `src/index.js`
 
-This is where the magic happens. Your app starts here.
+App start here.
 
 #### `src/styles.css`
 
-Write your app styles here.
+App styles here.
 
 #### `media/**`
 
-Put your icons, tile images, and screenshots to be used in your Cloudflare Apps page here.
+Icons, tile images, and screenshots to be used in the Cloudflare Apps page.
 
 [Download media-templates.sketch](https://github.com/CloudflareApps/MediaTemplates/raw/master/media-templates.sketch)
 
