@@ -140,6 +140,8 @@ function init() {
       options.radius
     ).toFixed(2)}px`
 
+    modalContent.style.background = options.ModalBackgroundColor
+
     confirmationButton.addEventListener("click", hideModal)
 
     closeButton.addEventListener("click", hideModal)

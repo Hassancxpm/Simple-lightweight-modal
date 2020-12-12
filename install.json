@@ -109,7 +109,7 @@
         },
         "default": "false"
       },
-      "ButtonTextColor":{
+      "ButtonTextColor": {
         "showIf": {
           "PopupButton": "true"
         },
@@ -140,11 +140,22 @@
         "description": "Default is #000000",
         "type": "string"
       },
-      "ModalButtonColor": {
+      "ModalBackgroundColor": {
         "showIf": {
           "showAdvanced": true
         },
         "order": 11,
+        "default": "#FFFFFF",
+        "format": "color",
+        "title": "Background color",
+        "description": "Default is #FFFFFF",
+        "type": "string"
+      },
+      "ModalButtonColor": {
+        "showIf": {
+          "showAdvanced": true
+        },
+        "order": 12,
         "default": "#d3d3d3",
         "format": "color",
         "title": "Buttons color",
@@ -155,7 +166,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 12,
+        "order": 13,
         "default": "#000000",
         "format": "color",
         "title": "Title color",
@@ -168,7 +179,7 @@
         },
         "title": "How rounded should the popup appear?",
         "format": "slider",
-        "order": 13,
+        "order": 14,
         "type": "number",
         "default": 0.05,
         "step": 0.01,
@@ -179,14 +190,14 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 14,
+        "order": 15,
         "title": "Do you want to add a French traduction?",
         "description": "If activated, this options detects the html tag 'lang' attribute and load the French traductions",
         "type": "string",
         "format": "radios",
         "enum": ["false", "true"],
         "enumNames": {
-          "false": "The same message in all pages",
+          "false": "No, I prefer the same message in all pages",
           "true": "Add a French traduction"
         },
         "default": "false"
@@ -195,7 +206,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 15,
+        "order": 16,
         "title": "French Title",
         "type": "string",
         "default": "Titre",
@@ -205,7 +216,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 16,
+        "order": 17,
         "title": "French Message",
         "type": "string",
         "format": "richtext",
@@ -216,7 +227,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 17,
+        "order": 18,
         "title": "French Button Title",
         "type": "string",
         "default": "OK",
