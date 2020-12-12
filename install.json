@@ -109,24 +109,57 @@
         },
         "default": "false"
       },
+      "ButtonTextColor":{
+        "showIf": {
+          "PopupButton": "true"
+        },
+        "order": 8,
+        "default": "#000000",
+        "format": "color",
+        "title": "Text Button color",
+        "description": "Default is #000000",
+        "type": "string"
+      },
       "UrlRedirection": {
         "showIf": {
           "ButtonBehaviorRedirect": "true"
         },
-        "order": 8,
+        "order": 9,
         "type": "string",
         "title": "Specify an URL to drive traffic",
         "placeholder": "https://example.com"
       },
-      "ModalMainColor": {
+      "ModalMessageColor": {
         "showIf": {
           "showAdvanced": true
         },
-        "order": 9,
+        "order": 10,
+        "default": "#000000",
+        "format": "color",
+        "title": "Message color",
+        "description": "Default is #000000",
+        "type": "string"
+      },
+      "ModalButtonColor": {
+        "showIf": {
+          "showAdvanced": true
+        },
+        "order": 11,
         "default": "#d3d3d3",
         "format": "color",
-        "title": "Button colors",
+        "title": "Buttons color",
         "description": "Default is #d3d3d3",
+        "type": "string"
+      },
+      "ModalTitleColor": {
+        "showIf": {
+          "showAdvanced": true
+        },
+        "order": 12,
+        "default": "#000000",
+        "format": "color",
+        "title": "Title color",
+        "description": "Default is #000000",
         "type": "string"
       },
       "radius": {
@@ -135,7 +168,7 @@
         },
         "title": "How rounded should the popup appear?",
         "format": "slider",
-        "order": 10,
+        "order": 13,
         "type": "number",
         "default": 0.05,
         "step": 0.01,
@@ -146,7 +179,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 11,
+        "order": 14,
         "title": "Do you want to add a French traduction?",
         "description": "If activated, this options detects the html tag 'lang' attribute and load the French traductions",
         "type": "string",
@@ -162,7 +195,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 12,
+        "order": 15,
         "title": "French Title",
         "type": "string",
         "default": "Titre",
@@ -172,7 +205,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 13,
+        "order": 16,
         "title": "French Message",
         "type": "string",
         "format": "richtext",
@@ -183,7 +216,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 14,
+        "order": 17,
         "title": "French Button Title",
         "type": "string",
         "default": "OK",

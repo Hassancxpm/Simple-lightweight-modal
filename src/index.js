@@ -66,6 +66,15 @@ function init() {
     const confirmationButton = document.querySelector(
       'cloudflare-app[app="lightPopup"] .button',
     )
+    const modalTitle = document.querySelector(
+      'cloudflare-app[app="lightPopup"] .big-title',
+    )
+    const button = document.querySelector(
+      'cloudflare-app[app="lightPopup"] button',
+    )
+    const modalMessage = document.querySelectorAll(
+      'cloudflare-app[app="lightPopup"] .modal-content p',
+    )
 
     function showModal() {
       modal[0].classList.add("show-modal")
@@ -114,9 +123,17 @@ function init() {
       redirectTrafficTo()
     }
 
-    closeButton.style.background = options.ModalMainColor
+    closeButton.style.background = options.ModalButtonColor
 
-    confirmationButton.style.background = options.ModalMainColor
+    confirmationButton.style.background = options.ModalButtonColor
+
+    modalTitle.style.color = options.ModalTitleColor
+
+    button.style.color = options.ButtonTextColor
+
+    for (let i = 0; i < modalMessage.length; i += 1) {
+      modalMessage[i].style.color = options.ModalMessageColor
+    }
 
     modalContent.style.borderRadius = `${(
       (element.clientHeight / 2) *

@@ -14,7 +14,7 @@ cloudflare-app[app="lightPopup"] {
 }
 
 /* Use native elements when you'd like to inherit some styles from the page. */
-cloudflare-app[app="lightPopup"] p {
+cloudflare-app[app="lightPopup"] .modal-content p {
   text-indent: 0;
   color: black;
 }
