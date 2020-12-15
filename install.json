@@ -109,25 +109,25 @@
         },
         "default": "false"
       },
+      "UrlRedirection": {
+        "showIf": {
+          "ButtonBehaviorRedirect": "true"
+        },
+        "order": 8,
+        "type": "string",
+        "title": "Specify an URL to drive traffic",
+        "placeholder": "https://example.com"
+      },
       "ButtonTextColor": {
         "showIf": {
           "PopupButton": "true"
         },
-        "order": 8,
+        "order": 9,
         "default": "#000000",
         "format": "color",
         "title": "Text Button color",
         "description": "Default is #000000",
         "type": "string"
-      },
-      "UrlRedirection": {
-        "showIf": {
-          "ButtonBehaviorRedirect": "true"
-        },
-        "order": 9,
-        "type": "string",
-        "title": "Specify an URL to drive traffic",
-        "placeholder": "https://example.com"
       },
       "ModalMessageColor": {
         "showIf": {
