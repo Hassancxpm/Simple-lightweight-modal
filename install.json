@@ -225,7 +225,8 @@
       },
       "FrenchButtonTitle": {
         "showIf": {
-          "AddFrenchTraduction": "true"
+          "AddFrenchTraduction": "true",
+          "PopupButton": "true"
         },
         "order": 18,
         "title": "French Button Title",
