@@ -63,10 +63,10 @@
         "format": "radios",
         "enum": ["true", "false"],
         "enumNames": {
-          "true": "Show this popup only once per user",
-          "false": "Show this popup only every time the page is loaded"
+          "true": "Fire this popup only once per visitor",
+          "false": "Fire this popup only every time the page is loaded"
         },
-        "title": "Show this popup only once per user?",
+        "title": "Show this popup only once per visitor?",
         "default": "true"
       },
       "PopupButton": {
@@ -99,13 +99,13 @@
           "PopupButton": "true"
         },
         "order": 7,
-        "title": "Redirect when click on the button",
+        "title": "Redirect when visitors click on the button",
         "type": "string",
         "format": "radios",
         "enum": ["false", "true"],
         "enumNames": {
-          "false": "Close the popup when users click on the button",
-          "true": "Redirect when users click on the button"
+          "false": "Close the popup when visitors click on the button",
+          "true": "Redirect when visitors click on the button"
         },
         "default": "false"
       },
