@@ -3,7 +3,6 @@ cloudflare-app[app="lightPopup"] {
   display: flex;
   position: fixed;
   margin: 0.5em 0.2em;
-  outline: 1px dotted;
   padding: 0.5em;
   bottom: 0;
   font-size: 16px;
