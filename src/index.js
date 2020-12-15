@@ -75,6 +75,8 @@ function init() {
     const modalMessage = document.querySelectorAll(
       'cloudflare-app[app="lightPopup"] .modal-content p',
     )
+    const isCloudflareDashboard =
+      window.location.hostname.indexOf("cloudflare") > -1
 
     function showModal() {
       modal[0].classList.add("show-modal")
@@ -152,9 +154,10 @@ function init() {
       confirmationButton.removeEventListener("click", handleRedirectOnClick)
     }
 
-    if (options.ShowOnlyOnce === "true" && !poppy) showModal()
+    if ((options.ShowOnlyOnce === "true" && !poppy) || isCloudflareDashboard)
+      showModal()
 
-    if (options.ShowOnlyOnce === "false") showModal()
+    if (options.ShowOnlyOnce === "false" || isCloudflareDashboard) showModal()
 
     if (options.PopupButton === "true") {
       showButton()
