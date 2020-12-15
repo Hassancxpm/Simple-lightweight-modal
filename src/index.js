@@ -31,6 +31,7 @@ function init() {
       return max
     }
 
+    element.style.display = "none"
     element.setAttribute("app", "lightPopup")
     element.style.zIndex = getMaxZIndex() + 1
     element.innerHTML = `<div class="modal">
@@ -79,6 +80,7 @@ function init() {
       window.location.hostname.indexOf("cloudflare") > -1
 
     function showModal() {
+      element.style.display = "flex"
       modal[0].classList.add("show-modal")
       localStorage.setItem("lightPopup", "true")
     }
