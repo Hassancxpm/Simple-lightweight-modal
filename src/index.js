@@ -85,6 +85,7 @@ function init() {
 
     function hideModal() {
       modal[0].classList.remove("show-modal")
+      element.style.display = "none"
     }
 
     function showButton() {
