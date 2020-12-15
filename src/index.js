@@ -112,6 +112,7 @@ function init() {
     function redirectTrafficTo() {
       if (documentLang === "fr") {
         if (options.UrlRedirectionFR && validURL(options.UrlRedirectionFR)) {
+          hideModal()
           window.location.href = options.UrlRedirectionFR
         } else {
           hideModal()
@@ -119,6 +120,7 @@ function init() {
       }
       if (documentLang !== "fr") {
         if (options.UrlRedirectionEN && validURL(options.UrlRedirectionEN)) {
+          hideModal()
           window.location.href = options.UrlRedirectionEN
         } else {
           hideModal()
