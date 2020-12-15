@@ -71,6 +71,7 @@ cloudflare-app[app="lightPopup"] .show-modal {
   visibility: visible;
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  max-height: 100%;
 }
 
 cloudflare-app[app="lightPopup"] .button.button--aylen {
