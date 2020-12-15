@@ -109,7 +109,7 @@
         },
         "default": "false"
       },
-      "UrlRedirection": {
+      "UrlRedirectionEN": {
         "showIf": {
           "ButtonBehaviorRedirect": "true"
         },
@@ -118,11 +118,21 @@
         "title": "Specify an URL to drive traffic",
         "placeholder": "https://example.com"
       },
+      "UrlRedirectionFR": {
+        "showIf": {
+          "ButtonBehaviorRedirect": "true",
+          "AddFrenchTraduction": "true"
+        },
+        "order": 9,
+        "type": "string",
+        "title": "Specify an URL to drive traffic on french version",
+        "placeholder": "https://example.com"
+      },
       "ButtonTextColor": {
         "showIf": {
           "PopupButton": "true"
         },
-        "order": 9,
+        "order": 10,
         "default": "#000000",
         "format": "color",
         "title": "Text Button color",
@@ -133,7 +143,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 10,
+        "order": 11,
         "default": "#000000",
         "format": "color",
         "title": "Message color",
@@ -144,7 +154,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 11,
+        "order": 12,
         "default": "#FFFFFF",
         "format": "color",
         "title": "Background color",
@@ -155,7 +165,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 12,
+        "order": 13,
         "default": "#d3d3d3",
         "format": "color",
         "title": "Buttons color",
@@ -166,7 +176,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 13,
+        "order": 14,
         "default": "#000000",
         "format": "color",
         "title": "Title color",
@@ -179,7 +189,7 @@
         },
         "title": "How rounded should the popup appear?",
         "format": "slider",
-        "order": 14,
+        "order": 15,
         "type": "number",
         "default": 0.05,
         "step": 0.01,
@@ -190,7 +200,7 @@
         "showIf": {
           "showAdvanced": true
         },
-        "order": 15,
+        "order": 16,
         "title": "Do you want to add a French traduction?",
         "description": "If activated, this options detects the html tag 'lang' attribute and load the French traductions",
         "type": "string",
@@ -206,7 +216,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 16,
+        "order": 17,
         "title": "French Title",
         "type": "string",
         "default": "Titre",
@@ -216,7 +226,7 @@
         "showIf": {
           "AddFrenchTraduction": "true"
         },
-        "order": 17,
+        "order": 18,
         "title": "French Message",
         "type": "string",
         "format": "richtext",
@@ -228,7 +238,7 @@
           "AddFrenchTraduction": "true",
           "PopupButton": "true"
         },
-        "order": 18,
+        "order": 19,
         "title": "French Button Title",
         "type": "string",
         "default": "OK",

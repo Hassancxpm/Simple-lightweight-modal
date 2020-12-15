@@ -109,13 +109,19 @@ function init() {
     }
 
     function redirectTrafficTo() {
-      if (
-        options.UrlRedirection.length > 0 &&
-        validURL(options.UrlRedirection)
-      ) {
-        window.location.href = options.UrlRedirection
-      } else {
-        hideModal()
+      if (documentLang === "fr") {
+        if (options.UrlRedirectionFR && validURL(options.UrlRedirectionFR)) {
+          window.location.href = options.UrlRedirectionFR
+        } else {
+          hideModal()
+        }
+      }
+      if (documentLang !== "fr") {
+        if (options.UrlRedirectionEN && validURL(options.UrlRedirectionEN)) {
+          window.location.href = options.UrlRedirectionEN
+        } else {
+          hideModal()
+        }
       }
     }
 
