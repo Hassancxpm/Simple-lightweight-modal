@@ -149,3 +149,18 @@ cloudflare-app[app="lightPopup"] .show-button {
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+@media only screen and (max-width: 760px) {
+  cloudflare-app[app="lightPopup"] .modal-content {
+    margin-top: 2em !important;
+  }
+  cloudflare-app[app="lightPopup"] .big-title {
+    font-size: 1em !important;
+  }
+  cloudflare-app[app="lightPopup"] .modal-content p {
+    font-size: 1em !important;
+  }
+  cloudflare-app[app="lightPopup"] .show-modal {
+    overflow-y: auto !important;
+    height: calc(100% - 50px);
+  }
+}
