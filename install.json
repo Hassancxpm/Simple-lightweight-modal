@@ -61,13 +61,14 @@
         "order": 4,
         "type": "string",
         "format": "radios",
-        "enum": ["true", "false"],
+        "enum": ["onlyOnce", "false", "oncePerSession"],
         "enumNames": {
-          "true": "Fire this popup only once per visitor",
-          "false": "Fire this popup only every time the page is loaded"
+          "onlyOnce": "Fire this popup only once per visitor",
+          "false": "Fire this popup only every time the page is loaded",
+          "oncePerSession": "Fire this popup only once per session"
         },
-        "title": "Show this popup only once per visitor?",
-        "default": "true"
+        "title": "Popup display options",
+        "default": "oncePerSession"
       },
       "PopupButton": {
         "showIf": {

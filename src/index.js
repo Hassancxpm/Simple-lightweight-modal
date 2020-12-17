@@ -12,6 +12,7 @@ function init() {
   function updateElement() {
     const poppy = localStorage.getItem("lightPopup")
     const documentLang = document.querySelector("html").getAttribute("lang")
+    const hasVisited = sessionStorage.getItem("lightPopup")
 
     element = INSTALL.createElement(options.location, element)
 
@@ -82,7 +83,6 @@ function init() {
     function showModal() {
       element.style.display = "flex"
       modal[0].classList.add("show-modal")
-      localStorage.setItem("lightPopup", "true")
     }
 
     function hideModal() {
@@ -162,10 +162,22 @@ function init() {
       confirmationButton.removeEventListener("click", handleRedirectOnClick)
     }
 
-    if ((options.ShowOnlyOnce === "true" && !poppy) || isCloudflareDashboard)
+    if (
+      options.ShowOnlyOnce === "onlyOnce" &&
+      !poppy /* ||
+      isCloudflareDashboard */
+    ) {
+      localStorage.setItem("lightPopup", "true")
       showModal()
+    }
 
-    if (options.ShowOnlyOnce === "false" || isCloudflareDashboard) showModal()
+    if (options.ShowOnlyOnce === "oncePerSession" && !hasVisited) {
+      sessionStorage.setItem("lightPopup", "true")
+      showModal()
+    }
+
+    if (options.ShowOnlyOnce === "false" /* || isCloudflareDashboard */)
+      showModal()
 
     if (options.PopupButton === "true") {
       showButton()
