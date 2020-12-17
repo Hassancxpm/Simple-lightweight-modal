@@ -148,10 +148,7 @@ function init() {
       modalMessage[i].style.color = options.ModalMessageColor
     }
 
-    modalContent.style.borderRadius = `${(
-      (element.clientHeight / 2) *
-      options.radius
-    ).toFixed(2)}px`
+    modalContent.style.borderRadius = `${options.radius}px`
 
     modalContent.style.background = options.ModalBackgroundColor
 
