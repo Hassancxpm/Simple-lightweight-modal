@@ -163,9 +163,8 @@ function init() {
     }
 
     if (
-      options.ShowOnlyOnce === "onlyOnce" &&
-      !poppy /* ||
-      isCloudflareDashboard */
+      (options.ShowOnlyOnce === "onlyOnce" && !poppy) ||
+      isCloudflareDashboard
     ) {
       localStorage.setItem("lightPopup", "true")
       showModal()
@@ -176,8 +175,7 @@ function init() {
       showModal()
     }
 
-    if (options.ShowOnlyOnce === "false" /* || isCloudflareDashboard */)
-      showModal()
+    if (options.ShowOnlyOnce === "false" || isCloudflareDashboard) showModal()
 
     if (options.PopupButton === "true") {
       showButton()
