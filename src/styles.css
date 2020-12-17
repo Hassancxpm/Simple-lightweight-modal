@@ -151,7 +151,7 @@ cloudflare-app[app="lightPopup"] .show-button {
 }
 @media only screen and (max-width: 760px) {
   cloudflare-app[app="lightPopup"] .modal-content {
-    margin-top: 5em !important;
+    margin-top: 8em !important;
   }
   cloudflare-app[app="lightPopup"] .big-title {
     font-size: 1em !important;
