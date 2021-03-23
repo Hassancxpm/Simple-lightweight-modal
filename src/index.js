@@ -10,7 +10,6 @@ function init() {
   // updateElement runs every time the options are updated.
   // Most of your code will end up inside this function.
   function updateElement() {
-    const poppy = localStorage.getItem("lightPopup")
     const documentLang = document.querySelector("html").getAttribute("lang")
     const hasVisited = sessionStorage.getItem("lightPopup")
 
@@ -163,14 +162,17 @@ function init() {
     }
 
     if (
-      (options.ShowOnlyOnce === "onlyOnce" && !poppy) ||
+      (options.ShowOnlyOnce === "onlyOnce" && !hasVisited) ||
       isCloudflareDashboard
     ) {
       localStorage.setItem("lightPopup", "true")
       showModal()
     }
 
-    if (options.ShowOnlyOnce === "oncePerSession" && !hasVisited) {
+    if (
+      (options.ShowOnlyOnce === "oncePerSession" && !hasVisited) ||
+      isCloudflareDashboard
+    ) {
       sessionStorage.setItem("lightPopup", "true")
       showModal()
     }
